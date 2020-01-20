@@ -1,6 +1,12 @@
 package com.singtel.code;
 
 public class Butterfly extends Bird {
+	protected boolean isCaterpiller = false;
+
+	public boolean isCaterpiller() {
+		return isCaterpiller;
+	}
+
 	Butterfly() {
 		super();
 		this.canFly = true;
