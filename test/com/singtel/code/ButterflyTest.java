@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class BirdTest {
+class ButterflyTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -28,8 +28,10 @@ class BirdTest {
 
 	@Test
 	final void test() {
-		Bird bird = new Bird();
-		bird.sing();
+		Bird butterfly = new Butterfly();
+		butterfly.sing();
+		butterfly.say();
+		butterfly.fly();
 		assertTrue(true);
 	}
 

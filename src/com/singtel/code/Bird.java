@@ -8,7 +8,10 @@ public class Bird extends Animal {
 	}
 
 	void fly() {
-		System.out.println("I am flying");
+		if (this.canFly)
+			System.out.println("I am flying");
+		else
+			System.out.println("I don't fly");
 	}
 
 	void say() {
