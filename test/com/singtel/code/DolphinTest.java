@@ -1,5 +1,6 @@
 package com.singtel.code;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterAll;
@@ -29,6 +30,9 @@ class DolphinTest {
 	@Test
 	final void test() {
 		Animal dolphin = new Dolphin();
+		assertFalse(dolphin.canFly(), "Dolphin don't fly");
+		assertFalse(dolphin.canWalk(), "Dolphin don't walk");
+		assertFalse(dolphin.canSing(), "Dolphin don't sing");
 		assertTrue(dolphin.canSwim(), "Dolphin can swim");
 	}
 

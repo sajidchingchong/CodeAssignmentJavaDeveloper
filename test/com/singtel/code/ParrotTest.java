@@ -1,5 +1,8 @@
 package com.singtel.code;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -32,6 +35,11 @@ class ParrotTest {
 		parrot.say();
 		parrot.setType(ParrotType.nearRooster);
 		parrot.say();
+
+		assertTrue(parrot.canFly(), "Parrot can fly");
+		assertTrue(parrot.canWalk(), "Parrot can walk");
+		assertTrue(parrot.canSing(), "Parrot can sing");
+		assertFalse(parrot.canSwim(), "Parrot don't swim");
 	}
 
 }

@@ -30,9 +30,12 @@ class CaterpillerTest {
 	@Test
 	final void test() {
 		Butterfly caterpiller = new Caterpiller();
-		caterpiller.walk();
-		assertTrue(caterpiller.isCaterpiller(), "I am a butterfly");
-		assertFalse(caterpiller.canFly(), "I cannot fly");
+		assertFalse(caterpiller.canFly(), "Caterpiller don't fly");
+		assertTrue(caterpiller.canWalk(), "Caterpiller can walk");
+		assertFalse(caterpiller.canSing(), "Caterpiller don't sing");
+		assertFalse(caterpiller.canSwim(), "Caterpiller don't swim");
+
+		assertTrue(caterpiller.isCaterpiller(), "I am a caterpiller");
 	}
 
 }

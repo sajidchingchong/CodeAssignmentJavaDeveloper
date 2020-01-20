@@ -32,8 +32,13 @@ class ClownfishTest {
 	@Test
 	final void test() {
 		Fish clownfish = new Clownfish();
-		assertFalse(clownfish.isLarge(), "Clownfish are small");
-		assertTrue(clownfish.getColor() == Color.ORANGE, "Clownfish are orange");
+		assertFalse(clownfish.canFly(), "Clownfish don't fly");
+		assertFalse(clownfish.canWalk(), "Clownfish don't walk");
+		assertFalse(clownfish.canSing(), "Clownfish don't sing");
+		assertTrue(clownfish.canSwim(), "Clownfish can swim");
+
+		assertTrue(clownfish.getColor() == Color.ORANGE, "Clownfish is orange");
+		assertFalse(clownfish.isLarge(), "Clownfish is small");
 		assertTrue(clownfish.makeJokes(), "Clownfish make jokes");
 		assertFalse(clownfish.eatOtherFish(), "Clownfish don't eat other fish");
 	}

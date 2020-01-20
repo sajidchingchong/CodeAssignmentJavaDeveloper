@@ -1,7 +1,7 @@
 package com.singtel.code;
 
 public class Parrot extends Bird {
-	private ParrotType type;
+	private ParrotType type = ParrotType.withDogs;
 
 	public ParrotType getType() {
 		return type;
@@ -12,18 +12,11 @@ public class Parrot extends Bird {
 	}
 
 	Parrot() {
-		this.type = ParrotType.withDogs;
+		super();
 	}
 
 	@Override
 	void say() {
-		switch (this.type) {
-		case withDogs:
-			System.out.println("Woof, woof");
-		case withCats:
-			System.out.println("Meow");
-		case nearRooster:
-			System.out.println("Cock-a-doodle-doo");
-		}
+		System.out.println(this.type.getSound());
 	}
 }

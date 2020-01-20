@@ -6,9 +6,4 @@ public class Caterpiller extends Butterfly {
 		this.isCaterpiller = true;
 		this.canFly = false;
 	}
-
-	@Override
-	void walk() {
-		System.out.println("I am walking");
-	}
 }

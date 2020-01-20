@@ -32,10 +32,15 @@ class SharkTest {
 	@Test
 	final void test() {
 		Fish shark = new Shark();
-		assertTrue(shark.isLarge(), "Sharks are large");
-		assertTrue(shark.getColor() == Color.GRAY, "Sharks are grey");
-		assertFalse(shark.makeJokes(), "Sharks don't make jokes");
-		assertTrue(shark.eatOtherFish(), "Sharks eat other fish");
+		assertFalse(shark.canFly(), "Shark don't fly");
+		assertFalse(shark.canWalk(), "Shark don't walk");
+		assertFalse(shark.canSing(), "Shark don't sing");
+		assertTrue(shark.canSwim(), "Shark can swim");
+
+		assertTrue(shark.getColor() == Color.GRAY, "Shark is gray");
+		assertTrue(shark.isLarge(), "Shark is large");
+		assertFalse(shark.makeJokes(), "Shark don't make jokes");
+		assertTrue(shark.eatOtherFish(), "Shark eat other fish");
 	}
 
 }

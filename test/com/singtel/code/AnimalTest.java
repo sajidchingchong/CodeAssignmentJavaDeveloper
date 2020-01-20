@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class RoosterTest {
+class AnimalTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -29,12 +29,11 @@ class RoosterTest {
 
 	@Test
 	final void test() {
-		Chicken rooster = new Rooster();
-		rooster.say();
-		assertFalse(rooster.canFly(), "Rooster don't fly");
-		assertTrue(rooster.canWalk(), "Rooster can walk");
-		assertTrue(rooster.canSing(), "Rooster can sing");
-		assertFalse(rooster.canSwim(), "Rooster don't swim");
+		Animal animal = new Animal();
+		assertFalse(animal.canFly(), "I don't fly");
+		assertTrue(animal.canWalk(), "I can walk");
+		assertFalse(animal.canSing(), "I don't sing");
+		assertFalse(animal.canSwim(), "I don't swim");
 	}
 
 }

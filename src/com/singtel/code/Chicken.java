@@ -2,7 +2,7 @@ package com.singtel.code;
 
 public class Chicken extends Bird {
 	Chicken() {
-		this.canSwim = false;
+		super();
 		this.canFly = false;
 	}
 

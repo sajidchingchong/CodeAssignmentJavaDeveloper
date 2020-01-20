@@ -30,8 +30,10 @@ class DuckTest {
 	final void test() {
 		Bird duck = new Duck();
 		duck.say();
-		assertTrue(duck.canSwim(), "Duck can swim");
 		assertTrue(duck.canFly(), "Duck can fly");
+		assertTrue(duck.canWalk(), "Duck can walk");
+		assertTrue(duck.canSing(), "Duck can sing");
+		assertTrue(duck.canSwim(), "Duck don't swim");
 	}
 
 }

@@ -5,8 +5,8 @@ import java.awt.Color;
 public class Clownfish extends Fish {
 	Clownfish() {
 		super();
-		this.isLarge = false;
 		this.color = Color.ORANGE;
+		this.isLarge = false;
 		this.makeJokes = true;
 		this.eatOtherFish = false;
 	}

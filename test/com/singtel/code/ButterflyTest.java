@@ -1,5 +1,6 @@
 package com.singtel.code;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterAll;
@@ -28,11 +29,13 @@ class ButterflyTest {
 
 	@Test
 	final void test() {
-		Bird butterfly = new Butterfly();
-		butterfly.sing();
-		butterfly.say();
-		butterfly.fly();
-		assertTrue(true);
+		Butterfly butterfly = new Butterfly();
+		assertTrue(butterfly.canFly(), "Butterfly can fly");
+		assertTrue(butterfly.canWalk(), "Butterfly can walk");
+		assertFalse(butterfly.canSing(), "Butterfly don't sing");
+		assertFalse(butterfly.canSwim(), "Butterfly don't swim");
+
+		assertFalse(butterfly.isCaterpiller(), "I am not a caterpiller");
 	}
 
 }

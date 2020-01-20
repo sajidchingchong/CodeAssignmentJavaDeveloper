@@ -1,6 +1,7 @@
 package com.singtel.code;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -28,10 +29,12 @@ class ChickenTest {
 
 	@Test
 	final void test() {
-		Bird chicken = new Duck();
+		Bird chicken = new Chicken();
 		chicken.say();
-		assertFalse(chicken.canSwim(), "Chicken cannot swim");
-		assertFalse(chicken.canFly(), "Chicken cannot fly");
+		assertFalse(chicken.canFly(), "Chicken don't fly");
+		assertTrue(chicken.canWalk(), "Chicken can walk");
+		assertTrue(chicken.canSing(), "Chicken can sing");
+		assertFalse(chicken.canSwim(), "Chicken don't swim");
 	}
 
 }
