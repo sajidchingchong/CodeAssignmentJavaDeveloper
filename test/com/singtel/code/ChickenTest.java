@@ -1,12 +1,14 @@
 package com.singtel.code;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class BirdTest {
+class ChickenTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -26,9 +28,10 @@ class BirdTest {
 
 	@Test
 	final void test() {
-		Bird bird = new Bird();
-		bird.sing();
-		assert (true);
+		Bird chicken = new Duck();
+		chicken.say();
+		assertFalse(chicken.canSwim(), "Chicken cannot swim");
+		assertFalse(chicken.canFly(), "Chicken cannot fly");
 	}
 
 }
